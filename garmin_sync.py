@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sync the last 8 weeks of Garmin activities into a local SQLite database.
+Sync the last 52 weeks of Garmin activities into a local SQLite database.
 
 Steps:
   1. Create the database/table if it doesn't exist (otherwise open it)
@@ -39,7 +39,7 @@ try:
 except NameError:  # running in a notebook / interactive session
     DB_PATH = Path.cwd() / "garmin_activities.db"
 
-WEEKS_BACK = 8
+WEEKS_BACK = 52
 PAGE_SIZE = 50
 MAX_PAGES = 100          # safety cap: 100 pages x 50 = 5,000 activities
 ACTIVITY_TYPE = None     # e.g. "running" to fetch only runs; None = all types
