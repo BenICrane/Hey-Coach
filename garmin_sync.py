@@ -12,9 +12,9 @@ Steps:
 
 Setup:
   - Python 3.8+ only. No third-party packages needed (standard library only).
-  - Your API key is taken from, in order: the GARMIN_API_KEY constant below,
-    the GARMIN_API_KEY environment variable, or a hidden prompt.
-    If you paste the key into this file, don't commit or share the file.
+  - Set your Garmin Personal API key in the GARMIN_API_KEY environment
+    variable. If it isn't set, the script prompts for it (input hidden).
+    Never paste the key into this file.
 
 Run:
   python3 garmin_sync.py
@@ -44,10 +44,6 @@ PAGE_SIZE = 50
 MAX_PAGES = 100          # safety cap: 100 pages x 50 = 5,000 activities
 ACTIVITY_TYPE = None     # e.g. "running" to fetch only runs; None = all types
 TIMEOUT_S = 30
-
-# Paste your Garmin Personal API key between the quotes. Don't commit this file
-# to git (or share it) once the key is in it.
-GARMIN_API_KEY = "GCDC_798bf017-df18-43db-b906-ee4f1d578a75.0ea7f0b6-c95f-4cee-aa41-b87364625f8d.xw5olmFu5Xy1pB88Zza0hblIxEA1zjUMN0Xt51fnwXs.3062017909"
 
 TOKEN_URL = (
     "https://personal.connectapi.garmin.com/"
@@ -196,8 +192,8 @@ def http_request(method, url, headers):
 # Step 2: token
 # --------------------------------------------------------------------------
 def get_api_key():
-    key = GARMIN_API_KEY.strip() or os.environ.get("GARMIN_API_KEY", "").strip()
-    if not key or key == "paste-your-key-here":
+    key = os.environ.get("GARMIN_API_KEY", "").strip()
+    if not key:
         key = getpass.getpass("Garmin Personal API key (input hidden): ").strip()
     if not key:
         raise SystemExit("No API key provided.")
