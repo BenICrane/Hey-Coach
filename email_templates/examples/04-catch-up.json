@@ -1,0 +1,22 @@
+{
+  "template": "04-catch-up",
+  "subject": "27 km to go this week",
+  "kicker": "Midweek · 26 Oct – 1 Nov",
+  "hero_value": "27",
+  "hero_unit": "km to go",
+  "caption": "Three runs left to reach 52 km by Sunday.",
+  "progress": {"done": 24.97, "planned": 27, "target": 52},
+  "sessions": [
+    {"day": "Wed", "session": "Easy, HR under 150", "km": "11 km"},
+    {"day": "Thu", "session": "Very easy, HR under 145", "km": "6 km"},
+    {"day": "Sat", "session": "Easy + 6 × 20 s strides", "km": "10 km"}
+  ],
+  "focus": "Wednesday's 11 km is the big one. Easy pace, HR under 150.",
+  "goal": "Building to 80 km a week by December",
+  "message": [
+    "25 km done, 27 to go, and three runs left to get there.",
+    "Monday's 16.9 km long run already did the heavy lifting.",
+    "Focus: Wednesday's 11 km, easy with HR under 150.",
+    "Every easy km builds toward 80 km a week by December and Brighton in 3:30."
+  ]
+}
