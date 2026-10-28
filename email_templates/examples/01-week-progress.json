@@ -1,0 +1,30 @@
+{
+  "template": "01-week-progress",
+  "subject": "Nearly halfway to 52 km",
+  "kicker": "Midweek · 26 Oct – 1 Nov",
+  "hero_value": "25.0",
+  "hero_unit": "of 52 km",
+  "caption": "Right on plan, with four days to go.",
+  "progress": {"done": 24.97, "planned": 27, "target": 52},
+  "days": [
+    {"label": "M", "km": "17", "state": "done"},
+    {"label": "T", "km": "8", "state": "done"},
+    {"label": "W", "km": "11", "state": "planned", "today": true},
+    {"label": "T", "km": "6", "state": "planned"},
+    {"label": "F", "state": "rest"},
+    {"label": "S", "km": "10", "state": "planned"},
+    {"label": "S", "state": "rest"}
+  ],
+  "stat1_value": "16.9 km",
+  "stat1_label": "Longest since January",
+  "stat2_value": "3 days",
+  "stat2_label": "Running in a row",
+  "focus": "Keep Wednesday's 11 km truly easy, HR under 150.",
+  "goal": "Building to 80 km a week by December",
+  "message": [
+    "You've banked 25 of this week's 52 km, right on plan.",
+    "Monday's 16.9 km was your longest run since January.",
+    "Focus: keep Wednesday's 11 km truly easy, HR under 150.",
+    "Every easy km builds toward 80 km a week by December and Brighton in 3:30."
+  ]
+}

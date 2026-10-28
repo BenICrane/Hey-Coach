@@ -1,0 +1,25 @@
+{
+  "template": "02-standout-run",
+  "subject": "Longest run since January",
+  "kicker": "Standout run · Mon 26 Oct",
+  "hero_value": "16.9",
+  "hero_unit": "km long run",
+  "caption": "Your longest since January, at 5:54/km.",
+  "compare": [
+    {"label": "Mon 26 Oct", "value": 16.86, "display": "16.9 km", "highlight": true},
+    {"label": "Previous longest, 17 Oct", "value": 13.91, "display": "13.9 km"},
+    {"label": "Sep–Oct average run", "value": 8.6, "display": "8.6 km"}
+  ],
+  "stat1_value": "25 / 52",
+  "stat1_label": "km this week",
+  "stat2_value": "3 days",
+  "stat2_label": "Running in a row",
+  "focus": "Keep Wednesday's 11 km truly easy, HR under 150.",
+  "goal": "Building to 80 km a week by December",
+  "message": [
+    "Monday's 16.9 km long run was your longest since January, and you've run three days in a row.",
+    "You've banked 25 of this week's 52 km, almost half.",
+    "Focus: keep Wednesday's 11 km truly easy, HR under 150.",
+    "Every easy km builds toward 80 km a week by December and Brighton in 3:30."
+  ]
+}

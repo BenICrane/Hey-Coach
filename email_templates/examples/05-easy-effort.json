@@ -1,0 +1,22 @@
+{
+  "template": "05-easy-effort",
+  "subject": "Easy days, big gains",
+  "kicker": "Effort check · 26 Oct – 1 Nov",
+  "hero_value": "64%",
+  "hero_unit": "in zones 1–2",
+  "caption": "Monday's long run ran a little hot. Easy days pull it back.",
+  "status": {"state": "warning", "label": "Below the 80% target"},
+  "meter": {"value": 64, "target": 80, "label": "this week"},
+  "stat1_value": "152 bpm",
+  "stat1_label": "Average HR this week",
+  "stat2_value": "5:56 /km",
+  "stat2_label": "Average pace",
+  "focus": "Slow down to stay under HR 150, even if it means 6:15/km.",
+  "goal": "Easy base now, Brighton in 3:30 next year",
+  "message": [
+    "64% of this week's running was in zones 1–2, close to your 80% target.",
+    "Monday's 16.9 km ran a little hot at HR 154.",
+    "Focus: stay under HR 150 on every run, even at 6:15/km.",
+    "Easy miles now build the base for 80 km weeks and Brighton in 3:30."
+  ]
+}

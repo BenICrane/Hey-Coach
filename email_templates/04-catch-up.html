@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  Hey Coach email template: Catch-up
+  Use when: km done is more than 10% behind the plan for the days so far
+  Fill with render_email.py; see README.md for the slots. Dark by design so
+  Gmail's dark mode leaves the colours alone. Sized for one phone screen
+  (about 280 x 370 CSS px): keep copy within the limits in README.md.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<title>{{SUBJECT}}</title>
+</head>
+<body style="margin:0;padding:0;background-color:#1a1a19;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#1a1a19;">{{PREHEADER}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#1a1a19" style="background-color:#1a1a19;">
+<tr><td align="center" style="padding:10px 14px 10px 14px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:420px;font-family:Roboto,'Google Sans',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#f0efec;">
+
+<!-- Kicker + hero stat + caption -->
+<tr><td style="font-size:11px;line-height:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#898781;">{{KICKER}}</td></tr>
+<tr><td style="padding-top:2px;font-size:40px;line-height:42px;font-weight:700;color:#f0efec;">{{HERO_VALUE}}<span style="font-size:16px;line-height:20px;font-weight:400;color:#c3c2b7;">&nbsp;{{HERO_UNIT}}</span></td></tr>
+<tr><td style="padding-top:2px;font-size:14px;line-height:19px;color:#c3c2b7;">{{CAPTION}}</td></tr>
+
+<!-- Week progress bar: done / planned / to target -->
+<tr><td style="padding-top:12px;">{{PROGRESS}}</td></tr>
+
+<!-- What's left: up to 3 sessions -->
+<tr><td style="padding-top:10px;">{{SESSIONS}}</td></tr>
+
+<!-- One focus for the rest of the week -->
+<tr><td style="padding-top:10px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#18263a" style="background-color:#18263a;border-radius:10px;">
+<tr><td style="padding:8px 12px;">
+<div style="font-size:10px;line-height:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#c3c2b7;">Focus this week</div>
+<div style="padding-top:2px;font-size:14px;line-height:19px;font-weight:600;color:#f0efec;">{{FOCUS}}</div>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Link back to the goals -->
+<tr><td style="padding-top:8px;font-size:12px;line-height:16px;color:#c3c2b7;"><span style="color:#3987e5;">&#8594;</span>&nbsp;{{GOAL}}</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

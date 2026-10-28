@@ -1,0 +1,31 @@
+{
+  "template": "03-streak",
+  "subject": "Three days in a row",
+  "kicker": "Consistency · last 14 days",
+  "hero_value": "8",
+  "hero_unit": "runs in 14 days",
+  "caption": "Three days in a row and counting.",
+  "days": [
+    {"label": "T", "state": "done"}, {"label": "F", "state": "rest"},
+    {"label": "S", "state": "done"}, {"label": "S", "state": "done"},
+    {"label": "M", "state": "done"}, {"label": "T", "state": "done"},
+    {"label": "W", "state": "rest"}, {"label": "T", "state": "rest"},
+    {"label": "F", "state": "rest"}, {"label": "S", "state": "rest"},
+    {"label": "S", "state": "done"}, {"label": "M", "state": "done"},
+    {"label": "T", "state": "done"}, {"label": "W", "state": "planned", "today": true}
+  ],
+  "strip_start": "Thu 15 Oct",
+  "strip_end": "Today",
+  "stat1_value": "25 / 52",
+  "stat1_label": "km this week",
+  "stat2_value": "16.9 km",
+  "stat2_label": "Longest since January",
+  "focus": "Make today four: 11 km easy, HR under 150.",
+  "goal": "Building to 80 km a week by December",
+  "message": [
+    "Eight runs in 14 days, and three days in a row right now.",
+    "You've banked 25 of this week's 52 km.",
+    "Focus: make today four, 11 km easy with HR under 150.",
+    "Consistency like this is what gets you to 80 km a week and Brighton in 3:30."
+  ]
+}
