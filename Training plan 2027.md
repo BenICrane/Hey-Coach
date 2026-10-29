@@ -50,6 +50,21 @@ Every block focuses on aerobic endurance. Build weeks increase by about 10% on t
 | Sun 1 Nov | 8.5 km easy (HR ≤145) + 6 × 20 s strides (60–90 s walk/jog recovery) + ~1 km cool-down | 10 |
 | **Total** | | **52.0** |
 
+## Next week: 2 – 8 Nov (recovery, 44 km ceiling)
+
+New job week. Tuesday has LMS from 17:30, and Wednesday and Thursday evenings are busy, so those days are morning sessions or rest. 42 km keeps under the 44 km ceiling.
+
+| Day | Session | km |
+|---|---|---|
+| Mon 2 Nov | Rest. First day of the new job | — |
+| Tue 3 Nov | Easy, morning before LMS (~6:00/km, HR ≤150) | 6 |
+| Wed 4 Nov | Easy, morning (~6:00/km, HR ≤150) + 6 × 20 s strides (60–90 s walk/jog recovery) | 8 |
+| Thu 5 Nov | Rest from running. Optional 25–30 min strength session in the morning | — |
+| Fri 6 Nov | Easy (~6:00/km, HR ≤150) + 6 × 20 s strides | 6 |
+| Sat 7 Nov | Long run, start at 6:05–6:10/km and keep HR ≤150 | 15 |
+| Sun 8 Nov | Recovery, very easy (HR <145) | 7 |
+| **Total** | | **42** |
+
 ## Progress
 
 Updated by the coach agent after each Garmin sync. Actuals come from `v_runs` in `garmin_activities.db`.
