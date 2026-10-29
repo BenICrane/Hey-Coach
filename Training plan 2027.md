@@ -41,14 +41,14 @@ Every block focuses on aerobic endurance. Build weeks increase by about 10% on t
 
 | Day | Session | km |
 |---|---|---|
-| Mon 26 Oct | Long run (done) | 16.9 |
-| Tue 27 Oct | Easy, morning before LMS (~6:00/km, HR ≤150) | 8 |
-| Wed 28 Oct | Easy (~6:00/km, HR ≤150) | 11 |
-| Thu 29 Oct | Recovery, very easy (HR <145) | 6 |
-| Fri 30 Oct | Rest | — |
-| Sat 31 Oct | 8.5 km easy + 6 × 20 s strides (60–90 s walk/jog recovery) + ~1 km cool-down | 10 |
-| Sun 1 Nov | Rest before the new job | — |
-| **Total** | | **51.9** |
+| Mon 26 Oct | Long run (done: 16.9 km, 5:54/km, HR 154) | 16.9 |
+| Tue 27 Oct | Easy (done: 8.1 km, 6:02/km, HR 148) | 8.1 |
+| Wed 28 Oct | Easy (done: 10.0 km, 6:09/km, HR 144) | 10.0 |
+| Thu 29 Oct | Rest | — |
+| Fri 30 Oct | Easy, strictly HR ≤145 (~6:10/km or slower) | 7 |
+| Sat 31 Oct | Rest | — |
+| Sun 1 Nov | 8.5 km easy (HR ≤145) + 6 × 20 s strides (60–90 s walk/jog recovery) + ~1 km cool-down | 10 |
+| **Total** | | **52.0** |
 
 ## Progress
 
