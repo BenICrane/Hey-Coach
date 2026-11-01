@@ -71,7 +71,7 @@ Updated by the coach agent after each Garmin sync. Actuals come from `v_runs` in
 
 | Week | Target km | Actual km | Runs | Long run km | % zones 1–2 | Notes |
 |---|---|---|---|---|---|---|
-| 26 Oct – 1 Nov | 52 | | | | | |
+| 26 Oct – 1 Nov | 52 | 52.2 | 5 | 16.9 | 82 | Longest run since January (16.9 km, 26 Oct). On target, zones 1–2 above 80%. Recovery week next. |
 | 2 – 8 Nov | 44 | | | | | |
 | 9 – 15 Nov | 57 | | | | | |
 | 16 – 22 Nov | 63 | | | | | |
