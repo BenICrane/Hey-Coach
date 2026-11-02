@@ -71,7 +71,7 @@ Updated by the coach agent after each Garmin sync. Actuals come from `v_runs` in
 
 | Week | Target km | Actual km | Runs | Long run km | % zones 1–2 | Notes |
 |---|---|---|---|---|---|---|
-| 26 Oct – 1 Nov | 52 | | | | | |
+| 26 Oct – 1 Nov | 52 | 52.2 | 5 | 16.9 | 82% | On target. Longest run since January. Mon long run avg HR 154 at 5:54/km, above the 150 easy-run guideline |
 | 2 – 8 Nov | 44 | | | | | |
 | 9 – 15 Nov | 57 | | | | | |
 | 16 – 22 Nov | 63 | | | | | |
