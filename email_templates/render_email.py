@@ -37,6 +37,13 @@ OTHER = "#5b5a56"     # de-emphasised comparison bars
 WARNING = "#fab219"   # status: warning (always with icon + label)
 GOOD = "#0ca30c"      # status: good (always with icon + label)
 
+# Ledger palette for the Monday email: pale green ledger paper, dark green
+# ink, red for this week and the long run. Light by design (see README).
+LEDGER = {
+    "BG": "#f1f4ea", "TEXT": "#1f2a22", "TEXT_2": "#45524a", "MUTED": "#7c887f",
+    "TRACK": "#cfdccb", "DONE": "#b3261e", "PLANNED": "#e7b6b2", "OTHER": "#b4bfb2",
+}
+
 # Copy limits that keep one email on one phone screen (about 280 x 370 CSS px).
 LIMITS = {
     "subject": 32, "kicker": 32, "hero_value": 6, "hero_unit": 16,
@@ -221,8 +228,9 @@ def block(weeks):
     """[{"label": "Build 1", "km": 58, "state": "done|current|upcoming"}]
 
     The weeks of the current training block as columns with their km on
-    top: done weeks grey (actual km), this week bright blue, upcoming weeks
-    planned blue (target km). Shows where this week sits in the block.
+    top: done weeks grey (actual km), this week in the accent colour,
+    upcoming weeks a tint of it (target km). Shows where this week sits in
+    the block.
     """
     top = max(w["km"] for w in weeks)
     h_max = 30
@@ -235,7 +243,7 @@ def block(weeks):
             f'<td valign="bottom" align="center" style="padding:0 3px;">'
             f'<div style="font-size:11px;line-height:13px;font-weight:700;padding-bottom:2px;color:{TEXT if cur else TEXT_2};">{km(w["km"])}</div>'
             '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
-            f'{_cell("100%", fills[w["state"]], h, "3px 3px 0 0")}</tr></table></td>'
+            f'{_cell("100%", fills[w["state"]], h, "0")}</tr></table></td>'
         )
         labels.append(
             f'<td align="center" style="padding-top:3px;font-size:10px;line-height:12px;white-space:nowrap;'
@@ -253,8 +261,8 @@ def plan(rows):
     """[{"day": "Mon", "session": "Easy, run home", "km": "10", "key": true}]
 
     The week's runs, one row per day (all 7 days). Rest days: "km" "" or
-    omitted, shown muted. The key session (usually the long run) gets a
-    blue marker and bold text. A total row is added from the km values.
+    omitted, shown muted. The key session (usually the long run) has its
+    km ringed in the accent colour. A total row is added from the km values.
     """
     out, total = [], 0.0
     for i, r in enumerate(rows):
@@ -267,20 +275,23 @@ def plan(rows):
             pass
         line = f"border-top:1px solid {TRACK};" if i else ""
         ink = MUTED if rest else (TEXT if key else TEXT_2)
-        mark = f'<span style="color:{DONE};">&#9679;</span>&nbsp;' if key else ""
-        cell = f"{line}padding:3px 0;font-size:12px;line-height:14px;"
+        figure = esc(k) + "&nbsp;km" if k else "&mdash;"
+        if key:  # ring the long run's km, like a circled figure in a ledger
+            figure = (f'<span style="display:inline-block;border:1.5px solid {DONE};border-radius:10px;'
+                      f'padding:0 5px;color:{DONE};">{figure}</span>')
+        cell = f"{line}padding:3px 0;font-size:11px;line-height:14px;"
         out.append(
             f'<tr><td width="34" style="{cell}font-weight:700;color:{MUTED if rest else TEXT};">{esc(r["day"])}</td>'
-            f'<td style="{cell}padding-left:6px;padding-right:6px;font-weight:{700 if key else 400};color:{ink};">{mark}{esc(r["session"])}</td>'
+            f'<td style="{cell}padding-left:8px;padding-right:6px;color:{ink};">{esc(r["session"])}</td>'
             f'<td align="right" style="{cell}white-space:nowrap;font-weight:700;color:{MUTED if rest else TEXT};">'
-            f'{esc(k) + "&nbsp;km" if k else "&mdash;"}</td></tr>'
+            f'{figure}</td></tr>'
         )
     out.append(
-        f'<tr><td colspan="2" style="border-top:1px solid {MUTED};padding:4px 0 0;font-size:12px;line-height:15px;font-weight:700;color:{TEXT};">Total</td>'
-        f'<td align="right" style="border-top:1px solid {MUTED};padding:4px 0 0;font-size:12px;line-height:15px;font-weight:700;color:{TEXT};white-space:nowrap;">{km(total)}&nbsp;km</td></tr>'
+        f'<tr><td colspan="2" style="border-top:2px solid {TEXT};padding:4px 0 0;font-size:11px;line-height:15px;font-weight:700;color:{TEXT};">Total</td>'
+        f'<td align="right" style="border-top:2px solid {TEXT};padding:4px 0 0;font-size:11px;line-height:15px;font-weight:700;color:{TEXT};white-space:nowrap;">{km(total)}&nbsp;km</td></tr>'
     )
     return (
-        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">'
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">'
         + "".join(out) + "</table>"
     )
 
@@ -364,7 +375,15 @@ def render(data):
             return ""
         return esc(data[key])
 
-    out = re.sub(r"\{\{([A-Z0-9_]+)\}\}", fill, template)
+    # The Monday email uses the Ledger palette; swap it in while its charts
+    # are built, then put the midweek palette back.
+    saved = {k: globals()[k] for k in LEDGER}
+    if "monday" in data["template"]:
+        globals().update(LEDGER)
+    try:
+        out = re.sub(r"\{\{([A-Z0-9_]+)\}\}", fill, template)
+    finally:
+        globals().update(saved)
     if missing:
         raise SystemExit(f"Missing values for {data['template']}: {', '.join(sorted(set(missing)))}")
     return out

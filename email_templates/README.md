@@ -28,15 +28,16 @@ goes in the focus line.
 <img src="preview-monday.png" alt="The Monday template filled with the week of 9 Nov 2026" width="280">
 
 Send `06-monday` every Monday morning, after the week's sessions are planned in
-the training plan. It shows:
+the training plan. It uses the **Ledger** design: pale green ledger paper, a red
+margin line, Georgia type and red for this week. It shows:
 
 - this week's target km, with a caption placing the block in the yearly plan
   (e.g. `Block 2 of 3 in the build to 80 km`). The chart already shows
   which week of the block it is, so don't repeat that
 - a chart of the weeks in the current block: done weeks in grey (actual km),
-  this week in bright blue, upcoming weeks in planned blue (target km)
-- the week's runs day by day, Mon–Sun, with rest days, the long run marked
-  and a total
+  this week in red, upcoming weeks in pale red (target km)
+- the week's runs day by day, Mon–Sun, with rest days, the long run's km
+  ringed in red, and a total
 - a goal line
 
 Never ask to make up missed km.
@@ -89,8 +90,12 @@ Chart data (shapes are in the examples):
 
 ## Design notes
 
-- Dark by design. Gmail's dark mode recolours light emails but leaves dark
-  ones alone, and a dark card still reads well in light mode.
+- The midweek emails are dark by design. Gmail's dark mode recolours light
+  emails but leaves dark ones alone, and a dark card still reads well in
+  light mode.
+- The Monday email is light (Ledger). Gmail's dark mode may recolour it, so
+  check it on a phone in dark mode. Its palette is `LEDGER` in
+  `render_email.py`, swapped in only while the Monday email is built.
 - Bars are table cells with a `bgcolor` and a non-breaking space. Gmail strips
   empty `<div>`s, which is why the earlier bars disappeared.
 - Colours come from the dataviz reference palette (dark mode): blue `#3987e5`

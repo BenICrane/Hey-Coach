@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <!--
-  Hey Coach email template: Monday morning
+  Hey Coach email template: Monday morning (Ledger design)
   Use: every Monday morning, after the week's sessions are planned.
-  Fill with render_email.py; see README.md for the slots. Dark by design so
-  Gmail's dark mode leaves the colours alone. Sized for one phone screen
+  Fill with render_email.py; see README.md for the slots. Light by design:
+  pale green ledger paper with a red margin line. Sized for one phone screen
   (about 280 x 370 CSS px): keep copy within the limits in README.md.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="supported-color-schemes" content="dark">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
 <title>{{SUBJECT}}</title>
 </head>
-<body style="margin:0;padding:0;background-color:#1a1a19;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#1a1a19;">{{PREHEADER}}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#1a1a19" style="background-color:#1a1a19;">
+<body style="margin:0;padding:0;background-color:#f1f4ea;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#f1f4ea;">{{PREHEADER}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f1f4ea" style="background-color:#f1f4ea;">
 <tr><td align="center" style="padding:10px 14px 10px 14px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:420px;font-family:Roboto,'Google Sans',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#f0efec;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f1f4ea" style="max-width:420px;background-color:#f1f4ea;font-family:Georgia,'Times New Roman',serif;color:#1f2a22;">
+<!-- Red ledger margin line down the left -->
+<tr><td style="padding:0 9px 0 9px;border-left:2px solid #d9867f;">
 
-<!-- Kicker + hero stat (this week's target) + caption (where the week sits in the block) -->
-<tr><td style="font-size:11px;line-height:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#898781;">{{KICKER}}</td></tr>
-<tr><td style="padding-top:2px;font-size:40px;line-height:42px;font-weight:700;color:#f0efec;">{{HERO_VALUE}}<span style="font-size:16px;line-height:20px;font-weight:400;color:#c3c2b7;">&nbsp;{{HERO_UNIT}}</span></td></tr>
-<tr><td style="padding-top:2px;font-size:14px;line-height:19px;color:#c3c2b7;">{{CAPTION}}</td></tr>
+<!-- Kicker + hero stat (this week's target) + caption (where the block sits in the year) -->
+<div style="font-size:11px;line-height:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#7c887f;">{{KICKER}}</div>
+<div style="padding-top:2px;font-size:38px;line-height:40px;font-weight:700;color:#1f2a22;">{{HERO_VALUE}}<span style="font-size:16px;line-height:20px;font-weight:400;font-style:italic;color:#45524a;">&nbsp;{{HERO_UNIT}}</span></div>
+<div style="padding-top:2px;font-size:14px;line-height:18px;color:#45524a;">{{CAPTION}}</div>
 
-<!-- The weeks of this block, this week highlighted -->
-<tr><td style="padding-top:10px;">{{BLOCK}}</td></tr>
+<!-- The weeks of this block, this week in red -->
+<div style="padding-top:10px;">{{BLOCK}}</div>
 
-<!-- The week's runs, day by day, with a total -->
-<tr><td style="padding-top:10px;">{{PLAN}}</td></tr>
+<!-- The week's runs, day by day; the long run's km ringed in red -->
+<div style="padding-top:10px;">{{PLAN}}</div>
 
 <!-- Link back to the goals -->
-<tr><td style="padding-top:8px;font-size:12px;line-height:16px;color:#c3c2b7;"><span style="color:#3987e5;">&#8594;</span>&nbsp;{{GOAL}}</td></tr>
+<div style="padding-top:8px;font-size:12px;line-height:16px;font-style:italic;color:#45524a;"><span style="color:#b3261e;font-style:normal;">&#8594;</span>&nbsp;{{GOAL}}</div>
 
+</td></tr>
 </table>
 </td></tr>
 </table>
