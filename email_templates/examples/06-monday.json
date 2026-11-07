@@ -4,7 +4,7 @@
   "kicker": "Monday · 9 – 15 Nov",
   "hero_value": "58",
   "hero_unit": "km this week",
-  "caption": "Block 2, build week 1 of 4.",
+  "caption": "Block 2 of 3 in the build to 80 km",
   "block": [
     {
       "label": "Build 1",
@@ -65,9 +65,9 @@
       "km": ""
     }
   ],
-  "goal": "Building to 80 km a week by December",
+  "goal": "Aerobic base for Brighton 2027 in 3:30",
   "message": [
-    "This week: 58 km, build week 1 of 4 in Block 2.",
+    "This week: 58 km, the first week of Block 2 of 3 on the way to 80 km a week.",
     "All done by Friday, so the weekend is free. Most runs are commutes.",
     "Thursday is the long run: 14 km to work, HR 150 or under."
   ]

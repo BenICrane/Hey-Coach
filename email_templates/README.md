@@ -30,8 +30,9 @@ goes in the focus line.
 Send `06-monday` every Monday morning, after the week's sessions are planned in
 the training plan. It shows:
 
-- this week's target km, with the block and week in the caption
-  (e.g. `Block 2, build week 1 of 4.`)
+- this week's target km, with a caption placing the block in the yearly plan
+  (e.g. `Block 2 of 3 in the build to 80 km`). The chart already shows
+  which week of the block it is, so don't repeat that
 - a chart of the weeks in the current block: done weeks in grey (actual km),
   this week in bright blue, upcoming weeks in planned blue (target km)
 - the week's runs day by day, Mon–Sun, with rest days, the long run marked
@@ -64,7 +65,7 @@ Text is escaped, so plain text only. Limits keep each email on one screen.
 | `kicker` | 32 chars | e.g. `Midweek · 26 Oct – 1 Nov` (shown in capitals) |
 | `hero_value` | 6 chars | The one standout number: `25.0`, `16.9`, `64%` |
 | `hero_unit` | 16 chars | e.g. `of 52 km`, `km long run` |
-| `caption` | 80 chars (40 on Monday) | One sentence on why the number matters; on Monday, the week's plan in a line |
+| `caption` | 80 chars (36 on Monday) | One sentence on why the number matters; on Monday, where the block sits in the yearly plan |
 | `stat1_value`, `stat2_value` | 9 chars | Supporting stats (templates 01, 02, 03, 05) |
 | `stat1_label`, `stat2_label` | 22 chars | |
 | `focus` | 72 chars | The one focus for the rest of the week (midweek) |

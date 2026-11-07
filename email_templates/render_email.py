@@ -46,7 +46,7 @@ LIMITS = {
 }
 # The Monday template carries the block chart and the week's day-by-day
 # plan, so its caption gets one line and each plan row stays on one line.
-MONDAY_LIMITS = {"caption": 40}
+MONDAY_LIMITS = {"caption": 36}
 SESSION_TEXT = 24  # one line in the sessions table
 PLAN_TEXT = 30     # one line in the Monday plan table
 MAX_WORDS, MIN_LINES, MAX_LINES = 60, 3, 5
