@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-  Hey Coach email template: Monday morning, Milestone week
-  Use when: the week hits a new high: 80 km, a new longest run, or the last build week of a block
+  Hey Coach email template: Monday morning
+  Use: every Monday morning, after the week's sessions are planned.
   Fill with render_email.py; see README.md for the slots. Dark by design so
   Gmail's dark mode leaves the colours alone. Sized for one phone screen
   (about 280 x 370 CSS px): keep copy within the limits in README.md.
@@ -20,14 +20,13 @@
 <tr><td align="center" style="padding:10px 14px 10px 14px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:420px;font-family:Roboto,'Google Sans',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#f0efec;">
 
-<!-- Kicker + hero stat (this week's target) + caption (the plan in one line) -->
+<!-- Kicker + hero stat (this week's target) + caption (where the week sits in the block) -->
 <tr><td style="font-size:11px;line-height:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#898781;">{{KICKER}}</td></tr>
 <tr><td style="padding-top:2px;font-size:40px;line-height:42px;font-weight:700;color:#f0efec;">{{HERO_VALUE}}<span style="font-size:16px;line-height:20px;font-weight:400;color:#c3c2b7;">&nbsp;{{HERO_UNIT}}</span></td></tr>
 <tr><td style="padding-top:2px;font-size:14px;line-height:19px;color:#c3c2b7;">{{CAPTION}}</td></tr>
 
-<!-- Weekly km across the plan, this week highlighted -->
-<tr><td style="padding-top:8px;">{{WEEK_CHART}}</td></tr>
-
+<!-- The weeks of this block, this week highlighted -->
+<tr><td style="padding-top:10px;">{{BLOCK}}</td></tr>
 
 <!-- The week's runs, day by day, with a total -->
 <tr><td style="padding-top:10px;">{{PLAN}}</td></tr>

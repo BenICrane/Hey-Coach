@@ -44,9 +44,9 @@ LIMITS = {
     "stat1_value": 9, "stat2_value": 9, "stat1_label": 22, "stat2_label": 22,
     "strip_start": 14, "strip_end": 14,
 }
-# The Monday templates carry the week's day-by-day plan, so their captions
-# get two lines at most and each plan row stays on one line.
-MONDAY_LIMITS = {"caption": 64}
+# The Monday template carries the block chart and the week's day-by-day
+# plan, so its caption gets one line and each plan row stays on one line.
+MONDAY_LIMITS = {"caption": 40}
 SESSION_TEXT = 24  # one line in the sessions table
 PLAN_TEXT = 30     # one line in the Monday plan table
 MAX_WORDS, MIN_LINES, MAX_LINES = 60, 3, 5
@@ -135,7 +135,6 @@ def progress(d):
 
 DAY_STYLE = {  # state -> (fill, text colour)
     "done": (DONE, "#ffffff"),
-    "key": (DONE, "#ffffff"),      # Monday: the week's key session (e.g. long run)
     "planned": (PLANNED, TEXT),
     "rest": (TRACK, MUTED),
     "missed": (TRACK, MUTED),
@@ -218,41 +217,35 @@ def meter(d):
     )
 
 
-def week_chart(weeks):
-    """[{"label": "26 Oct", "km": 52, "state": "done|current|upcoming"}]
+def block(weeks):
+    """[{"label": "Build 1", "km": 58, "state": "done|current|upcoming"}]
 
-    Weekly km across the plan as columns. Only this week is highlighted
-    (blue, with its km on top); done weeks are grey, upcoming weeks are the
-    track colour. Labels are optional (leave them out on Monday to save
-    space); if given, label only the first and current weeks.
+    The weeks of the current training block as columns with their km on
+    top: done weeks grey (actual km), this week bright blue, upcoming weeks
+    planned blue (target km). Shows where this week sits in the block.
     """
     top = max(w["km"] for w in weeks)
-    h_max = 26
-    fills = {"done": OTHER, "current": DONE, "upcoming": TRACK}
+    h_max = 30
+    fills = {"done": OTHER, "current": DONE, "upcoming": PLANNED}
     cols, labels = [], []
     for w in weeks:
         cur = w["state"] == "current"
         h = max(round(w["km"] / top * h_max), 3)
-        value = (
-            f'<div style="font-size:11px;line-height:13px;font-weight:700;color:{TEXT};padding-bottom:2px;">{km(w["km"])}</div>'
-            if cur else ""
-        )
-        fill = fills[w["state"]]
         cols.append(
-            f'<td valign="bottom" align="center" style="padding:0 2px;">{value}'
+            f'<td valign="bottom" align="center" style="padding:0 3px;">'
+            f'<div style="font-size:11px;line-height:13px;font-weight:700;padding-bottom:2px;color:{TEXT if cur else TEXT_2};">{km(w["km"])}</div>'
             '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
-            f'{_cell("100%", fill, h, "3px 3px 0 0")}</tr></table></td>'
+            f'{_cell("100%", fills[w["state"]], h, "3px 3px 0 0")}</tr></table></td>'
         )
         labels.append(
-            f'<td align="center" style="padding-top:4px;font-size:10px;line-height:12px;white-space:nowrap;'
-            f'font-weight:{700 if cur else 400};color:{TEXT if cur else MUTED};">{esc(w.get("label", "")) or "&nbsp;"}</td>'
+            f'<td align="center" style="padding-top:3px;font-size:10px;line-height:12px;white-space:nowrap;'
+            f'font-weight:{700 if cur else 400};color:{TEXT if cur else MUTED};">{esc(w["label"])}</td>'
         )
     return (
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
         f'style="border-collapse:separate;table-layout:fixed;"><tr>{"".join(cols)}</tr>'
         f'<tr><td colspan="{len(weeks)}" height="1" bgcolor="{MUTED}" style="height:1px;background-color:{MUTED};font-size:1px;line-height:1px;">&nbsp;</td></tr>'
-        + (f'<tr>{"".join(labels)}</tr>' if any(w.get("label") for w in weeks) else "")
-        + "</table>"
+        f'<tr>{"".join(labels)}</tr></table>'
     )
 
 
@@ -320,7 +313,7 @@ def status(d):
 COMPONENTS = {
     "progress": progress, "days": days, "compare": compare,
     "meter": meter, "sessions": sessions, "status": status,
-    "week_chart": week_chart, "plan": plan,
+    "block": block, "plan": plan,
 }
 
 

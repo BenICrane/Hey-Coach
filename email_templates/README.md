@@ -1,7 +1,7 @@
 # Email templates
 
 HTML templates for two coach emails: five for the **midweek** motivation email
-(01–05) and five for the **Monday morning** message (06–10), which sums up the
+(01–05) and one for the **Monday morning** message (06), which sums up the
 week's plan. They share one layout, so every email
 looks the same, and each one fits on one phone screen in the Gmail app (about
 280 × 370 CSS px) with no scrolling.
@@ -23,23 +23,22 @@ Pick the first one that matches this week's data:
 If an issue (zones, HR drift, behind target) doesn't get the template, it still
 goes in the focus line.
 
-## Which Monday template
+## Monday template
 
-![The five Monday templates](preview-monday.png)
+<img src="preview-monday.png" alt="The Monday template filled with the week of 9 Nov 2026" width="280">
 
-Send on Monday morning, after the week's sessions are planned in the training
-plan. Pick the first one that matches:
+Send `06-monday` every Monday morning, after the week's sessions are planned in
+the training plan. It shows:
 
-| # | Template | Use when | Hero stat | Shows |
-|---|---|---|---|---|
-| 1 | `10-monday-fresh-start` | last week finished more than 10% under target, or the long run was missed | this week's km | last week in two stats |
-| 2 | `07-monday-recovery` | a recovery week (planned or taken early) | this week's km | last and next week's km |
-| 3 | `08-monday-busy-week` | work, travel or being away moves or squeezes the week | km and by when | status line |
-| 4 | `09-monday-milestone` | 80 km, a new longest run, or the last build week of a block | this week's km | weekly km across the plan |
-| 5 | `06-monday-build` | anything else (the default) | this week's km | nothing extra |
+- this week's target km, with the block and week in the caption
+  (e.g. `Block 2, build week 1 of 4.`)
+- a chart of the weeks in the current block: done weeks in grey (actual km),
+  this week in bright blue, upcoming weeks in planned blue (target km)
+- the week's runs day by day, Mon–Sun, with rest days, the long run marked
+  and a total
+- a goal line
 
-Every Monday email has a table of the week's runs, day by day (Mon–Sun, with
-rest days and a total), and ends with a goal line. Never ask to make up missed km.
+Never ask to make up missed km.
 
 ## How to send
 
@@ -65,8 +64,8 @@ Text is escaped, so plain text only. Limits keep each email on one screen.
 | `kicker` | 32 chars | e.g. `Midweek · 26 Oct – 1 Nov` (shown in capitals) |
 | `hero_value` | 6 chars | The one standout number: `25.0`, `16.9`, `64%` |
 | `hero_unit` | 16 chars | e.g. `of 52 km`, `km long run` |
-| `caption` | 80 chars (64 on Monday) | One sentence on why the number matters; on Monday, the week's plan in a line |
-| `stat1_value`, `stat2_value` | 9 chars | Supporting stats (templates 01, 02, 03, 05, 07, 10) |
+| `caption` | 80 chars (40 on Monday) | One sentence on why the number matters; on Monday, the week's plan in a line |
+| `stat1_value`, `stat2_value` | 9 chars | Supporting stats (templates 01, 02, 03, 05) |
 | `stat1_label`, `stat2_label` | 22 chars | |
 | `focus` | 72 chars | The one focus for the rest of the week (midweek) |
 | `goal` | 52 chars | One line linking to the goals |
@@ -79,13 +78,13 @@ Chart data (shapes are in the examples):
 |---|---|---|
 | `progress` | 01, 04 | `done`, `planned` (km still planned), `target` km |
 | `days` | 01 (7 days, with `km`), 03 (14 days) | `label`, `state` (`done`, `planned`, `rest`, `missed`), optional `km`, `today` |
-| `plan` | 06–10 | 7 rows, Mon–Sun: `day`, `session` (30 chars), `km` (leave out on rest days), `key: true` on the long run. The total is added for you |
+| `plan` | 06 | 7 rows, Mon–Sun: `day`, `session` (30 chars), `km` (leave out on rest days), `key: true` on the long run. The total is added for you |
 | `strip_start`, `strip_end` | 03 | Labels under the 14-day strip |
 | `compare` | 02 | 2–3 rows: `label`, `value`, `display`, `highlight` on the standout one |
 | `sessions` | 04 | Up to 3 rows: `day`, `session` (24 chars), `km` |
-| `week_chart` | 09 | One column per plan week: `km`, `state` (`done`, `current`, `upcoming`), no labels on Monday |
+| `block` | 06 | One column per week of the current block: `label` (e.g. `Build 1`, `Recovery`), `km` (actual if done, else target), `state` (`done`, `current`, `upcoming`) |
 | `meter` | 05 | `value` %, `target` %, `label` |
-| `status` | 05, 08 | `state` (`warning` or `good`) and `label` |
+| `status` | 05 | `state` (`warning` or `good`) and `label` |
 
 ## Design notes
 

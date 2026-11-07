@@ -1,14 +1,32 @@
 {
-  "template": "08-monday-busy-week",
-  "subject": "58 km, all done by Friday",
+  "template": "06-monday",
+  "subject": "58 km this week, done by Friday",
   "kicker": "Monday · 9 – 15 Nov",
   "hero_value": "58",
-  "hero_unit": "km by Friday",
-  "caption": "Away at the weekend, so it's commutes and a Thursday long run.",
-  "status": {
-    "state": "good",
-    "label": "Weekend free: Sat–Sun optional"
-  },
+  "hero_unit": "km this week",
+  "caption": "Block 2, build week 1 of 4.",
+  "block": [
+    {
+      "label": "Build 1",
+      "km": 58,
+      "state": "current"
+    },
+    {
+      "label": "Build 2",
+      "km": 63,
+      "state": "upcoming"
+    },
+    {
+      "label": "Build 3",
+      "km": 69,
+      "state": "upcoming"
+    },
+    {
+      "label": "Recovery",
+      "km": 50,
+      "state": "upcoming"
+    }
+  ],
   "plan": [
     {
       "day": "Mon",
@@ -47,10 +65,10 @@
       "km": ""
     }
   ],
-  "goal": "Block 2, build week 1 of 3",
+  "goal": "Building to 80 km a week by December",
   "message": [
-    "58 km this week, all done by Friday so the weekend is free.",
-    "Most runs are commutes; Thursday is a 14 km long run to work, HR 150 or under.",
-    "Strength first thing Monday, strides Wednesday and Friday."
+    "This week: 58 km, build week 1 of 4 in Block 2.",
+    "All done by Friday, so the weekend is free. Most runs are commutes.",
+    "Thursday is the long run: 14 km to work, HR 150 or under."
   ]
 }
