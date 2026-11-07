@@ -2,7 +2,7 @@
 
 HTML templates for two coach emails: five for the **midweek** motivation email
 (01–05) and five for the **Monday morning** message (06–10), which sums up the
-week's plan and adds a motivational line. They share one layout, so every email
+week's plan. They share one layout, so every email
 looks the same, and each one fits on one phone screen in the Gmail app (about
 280 × 370 CSS px) with no scrolling.
 
@@ -38,9 +38,7 @@ plan. Pick the first one that matches:
 | 4 | `09-monday-milestone` | 80 km, a new longest run, or the last build week of a block | this week's km | weekly km across the plan, 2 key sessions |
 | 5 | `06-monday-build` | anything else (the default) | this week's km | day strip, 2 key sessions |
 
-Every Monday email ends with a motivation card and a goal line. Keep the
-motivation specific to the week (what makes it matter, what it builds toward)
-rather than a generic quote. Never ask to make up missed km.
+Every Monday email ends with a goal line. Never ask to make up missed km.
 
 ## How to send
 
@@ -70,8 +68,6 @@ Text is escaped, so plain text only. Limits keep each email on one screen.
 | `stat1_value`, `stat2_value` | 9 chars | Supporting stats (templates 01, 02, 03, 05, 10) |
 | `stat1_label`, `stat2_label` | 22 chars | |
 | `focus` | 72 chars | The one focus for the rest of the week (midweek) |
-| `motivation_label` | 24 chars | Monday card heading, e.g. `Monday mindset` |
-| `motivation` | 80 chars | Monday motivational line (2 lines on a phone) |
 | `goal` | 52 chars | One line linking to the goals |
 | `message` | 3–5 lines, < 60 words | Plain-text version; its first line is the inbox preview |
 | `preheader` | optional | Inbox preview text, if not the first message line |

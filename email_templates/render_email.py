@@ -43,8 +43,6 @@ LIMITS = {
     "caption": 80, "focus": 72, "goal": 52,
     "stat1_value": 9, "stat2_value": 9, "stat1_label": 22, "stat2_label": 22,
     "strip_start": 14, "strip_end": 14,
-    # Monday templates
-    "motivation_label": 24, "motivation": 80,
 }
 # The Monday templates carry a week plan as well, so their captions get two
 # lines at most and they show two key sessions, not three.
