@@ -58,7 +58,7 @@ Away Saturday and Sunday, so the full 58 km is done by Friday and the weekend is
 
 | Day | Session | km |
 |---|---|---|
-| Mon 9 Nov | Run in, longer route, easy (~6:00/km, HR ≤150). Evening: 25–30 min strength session | 10 |
+| Mon 9 Nov | Morning: 25–30 min strength session. Evening: run home, longer route, easy (~6:00/km, HR ≤150) | 10 |
 | Tue 10 Nov | Run in, longer route, easy (7). Run home, longer route, easy (7) | 14 |
 | Wed 11 Nov | Run in, easy + 6 × 20 s strides (5). Run home, easy (5) | 10 |
 | Thu 12 Nov | Long run to work, much longer route: start at 6:05–6:10/km and keep HR ≤150 (~1 h 25 min). Travel home without running | 14 |
