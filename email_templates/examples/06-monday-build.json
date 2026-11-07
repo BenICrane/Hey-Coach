@@ -1,0 +1,65 @@
+{
+  "template": "06-monday-build",
+  "subject": "63 km this week. Let's build",
+  "kicker": "Monday · 16 – 22 Nov",
+  "hero_value": "63",
+  "hero_unit": "km this week",
+  "caption": "Build week 2: five runs and a 19 km long run.",
+  "days": [
+    {
+      "label": "M",
+      "km": "10",
+      "state": "planned",
+      "today": true
+    },
+    {
+      "label": "T",
+      "km": "14",
+      "state": "planned"
+    },
+    {
+      "label": "W",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "T",
+      "state": "rest"
+    },
+    {
+      "label": "F",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "S",
+      "km": "19",
+      "state": "key"
+    },
+    {
+      "label": "S",
+      "state": "rest"
+    }
+  ],
+  "sessions": [
+    {
+      "day": "Sat",
+      "session": "Long run, HR under 150",
+      "km": "19 km"
+    },
+    {
+      "day": "Wed",
+      "session": "Easy + 6 × 20 s strides",
+      "km": "10 km"
+    }
+  ],
+  "motivation_label": "Monday mindset",
+  "motivation": "Nothing heroic needed. Stack easy days and let Saturday do the work.",
+  "goal": "Building to 80 km a week by December",
+  "message": [
+    "This week: 63 km over five runs, with a 19 km long run on Saturday.",
+    "Strides on Wednesday, strength on Monday, everything else easy.",
+    "Nothing heroic needed. Stack easy days and let the long run do the work.",
+    "Every easy km builds toward 80 km a week and Brighton in 3:30."
+  ]
+}

@@ -43,7 +43,14 @@ LIMITS = {
     "caption": 80, "focus": 72, "goal": 52,
     "stat1_value": 9, "stat2_value": 9, "stat1_label": 22, "stat2_label": 22,
     "strip_start": 14, "strip_end": 14,
+    # Monday templates
+    "motivation_label": 24, "motivation": 80,
 }
+# The Monday templates carry a week plan as well, so their captions get two
+# lines at most and they show two key sessions, not three.
+MONDAY_LIMITS = {"caption": 64}
+MONDAY_SESSIONS = 2
+SESSION_TEXT = 24  # one line in the sessions table
 MAX_WORDS, MIN_LINES, MAX_LINES = 60, 3, 5
 
 
@@ -130,6 +137,7 @@ def progress(d):
 
 DAY_STYLE = {  # state -> (fill, text colour)
     "done": (DONE, "#ffffff"),
+    "key": (DONE, "#ffffff"),      # Monday: the week's key session (e.g. long run)
     "planned": (PLANNED, TEXT),
     "rest": (TRACK, MUTED),
     "missed": (TRACK, MUTED),
@@ -212,6 +220,43 @@ def meter(d):
     )
 
 
+def week_chart(weeks):
+    """[{"label": "26 Oct", "km": 52, "state": "done|current|upcoming"}]
+
+    Weekly km across the plan as columns. Only this week is highlighted
+    (blue, with its km on top); done weeks are grey, upcoming weeks are the
+    track colour. Labels are optional: give them to the first, current and
+    last weeks only so they don't collide.
+    """
+    top = max(w["km"] for w in weeks)
+    h_max = 40
+    fills = {"done": OTHER, "current": DONE, "upcoming": TRACK}
+    cols, labels = [], []
+    for w in weeks:
+        cur = w["state"] == "current"
+        h = max(round(w["km"] / top * h_max), 3)
+        value = (
+            f'<div style="font-size:11px;line-height:13px;font-weight:700;color:{TEXT};padding-bottom:2px;">{km(w["km"])}</div>'
+            if cur else ""
+        )
+        fill = fills[w["state"]]
+        cols.append(
+            f'<td valign="bottom" align="center" style="padding:0 2px;">{value}'
+            '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
+            f'{_cell("100%", fill, h, "3px 3px 0 0")}</tr></table></td>'
+        )
+        labels.append(
+            f'<td align="center" style="padding-top:4px;font-size:10px;line-height:12px;white-space:nowrap;'
+            f'font-weight:{700 if cur else 400};color:{TEXT if cur else MUTED};">{esc(w.get("label", "")) or "&nbsp;"}</td>'
+        )
+    return (
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
+        f'style="border-collapse:separate;table-layout:fixed;"><tr>{"".join(cols)}</tr>'
+        f'<tr><td colspan="{len(weeks)}" height="1" bgcolor="{MUTED}" style="height:1px;background-color:{MUTED};font-size:1px;line-height:1px;">&nbsp;</td></tr>'
+        f'<tr>{"".join(labels)}</tr></table>'
+    )
+
+
 def sessions(rows):
     """[{"day": "Wed", "session": "Easy, HR under 150", "km": "11 km"}] - up to 3 rows."""
     out = []
@@ -240,6 +285,7 @@ def status(d):
 COMPONENTS = {
     "progress": progress, "days": days, "compare": compare,
     "meter": meter, "sessions": sessions, "status": status,
+    "week_chart": week_chart,
 }
 
 
@@ -248,9 +294,17 @@ COMPONENTS = {
 # --------------------------------------------------------------------------
 def check_copy(data):
     problems = []
-    for key, limit in LIMITS.items():
+    monday = "monday" in data.get("template", "")
+    limits = {**LIMITS, **MONDAY_LIMITS} if monday else LIMITS
+    for key, limit in limits.items():
         if key in data and len(str(data[key])) > limit:
             problems.append(f"'{key}' is {len(str(data[key]))} chars (max {limit}): {data[key]!r}")
+    rows = data.get("sessions", [])
+    if monday and len(rows) > MONDAY_SESSIONS:
+        problems.append(f"'sessions' has {len(rows)} rows (Monday templates show {MONDAY_SESSIONS})")
+    for r in rows:
+        if len(r["session"]) > SESSION_TEXT:
+            problems.append(f"session {r['session']!r} is {len(r['session'])} chars (max {SESSION_TEXT})")
     lines = data.get("message", [])
     words = sum(len(line.split()) for line in lines)
     if not MIN_LINES <= len(lines) <= MAX_LINES:

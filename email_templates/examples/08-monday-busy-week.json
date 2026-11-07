@@ -1,0 +1,69 @@
+{
+  "template": "08-monday-busy-week",
+  "subject": "58 km, all done by Friday",
+  "kicker": "Monday · 9 – 15 Nov",
+  "hero_value": "58",
+  "hero_unit": "km by Friday",
+  "caption": "Away at the weekend, so it's commutes and a Thursday long run.",
+  "status": {
+    "state": "good",
+    "label": "Weekend free: Sat–Sun optional"
+  },
+  "days": [
+    {
+      "label": "M",
+      "km": "10",
+      "state": "planned",
+      "today": true
+    },
+    {
+      "label": "T",
+      "km": "14",
+      "state": "planned"
+    },
+    {
+      "label": "W",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "T",
+      "km": "14",
+      "state": "key"
+    },
+    {
+      "label": "F",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "S",
+      "state": "rest"
+    },
+    {
+      "label": "S",
+      "state": "rest"
+    }
+  ],
+  "sessions": [
+    {
+      "day": "Thu",
+      "session": "Long run to work, easy",
+      "km": "14 km"
+    },
+    {
+      "day": "Mon",
+      "session": "Strength, then run home",
+      "km": "10 km"
+    }
+  ],
+  "motivation_label": "Monday mindset",
+  "motivation": "Busy weeks are where habits prove themselves. Run to work.",
+  "goal": "Block 2, build week 1 of 3",
+  "message": [
+    "58 km this week, all done by Friday so the weekend is free.",
+    "Most runs are commutes; Thursday is a 14 km long run to work, HR 150 or under.",
+    "Strength first thing Monday, strides Wednesday and Friday.",
+    "A busy week is where habits prove themselves."
+  ]
+}

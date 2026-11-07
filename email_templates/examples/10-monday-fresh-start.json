@@ -1,0 +1,57 @@
+{
+  "template": "10-monday-fresh-start",
+  "subject": "New week, clean slate",
+  "kicker": "Monday · 16 – 22 Nov",
+  "hero_value": "63",
+  "hero_unit": "km this week",
+  "caption": "Last week came up short. No catching up, just this week.",
+  "stat1_value": "44 km",
+  "stat1_label": "Last week, of 58",
+  "stat2_value": "4 runs",
+  "stat2_label": "Still in the bank",
+  "days": [
+    {
+      "label": "M",
+      "km": "10",
+      "state": "planned",
+      "today": true
+    },
+    {
+      "label": "T",
+      "km": "14",
+      "state": "planned"
+    },
+    {
+      "label": "W",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "T",
+      "state": "rest"
+    },
+    {
+      "label": "F",
+      "km": "10",
+      "state": "planned"
+    },
+    {
+      "label": "S",
+      "km": "19",
+      "state": "key"
+    },
+    {
+      "label": "S",
+      "state": "rest"
+    }
+  ],
+  "motivation_label": "Monday mindset",
+  "motivation": "One short week doesn't undo a month of base. Consistency wins.",
+  "goal": "Still on track for 80 km a week",
+  "message": [
+    "Last week came up short at 44 of 58 km. That's fine.",
+    "This week: 63 km over five runs, with 19 km on Saturday. No making up old km.",
+    "One short week doesn't undo a month of base.",
+    "Consistency wins, not catch-up."
+  ]
+}

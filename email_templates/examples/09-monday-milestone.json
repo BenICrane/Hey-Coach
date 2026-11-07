@@ -1,0 +1,73 @@
+{
+  "template": "09-monday-milestone",
+  "subject": "This is the 80 km week",
+  "kicker": "Monday · 21 – 27 Dec",
+  "hero_value": "80",
+  "hero_unit": "km this week",
+  "caption": "The 2026 goal, up from 26 km a week in October.",
+  "week_chart": [
+    {
+      "label": "26 Oct",
+      "km": 52,
+      "state": "done"
+    },
+    {
+      "km": 31,
+      "state": "done"
+    },
+    {
+      "km": 58,
+      "state": "done"
+    },
+    {
+      "km": 63,
+      "state": "done"
+    },
+    {
+      "km": 69,
+      "state": "done"
+    },
+    {
+      "km": 50,
+      "state": "done"
+    },
+    {
+      "km": 72,
+      "state": "done"
+    },
+    {
+      "km": 76,
+      "state": "done"
+    },
+    {
+      "label": "This week",
+      "km": 80,
+      "state": "current"
+    },
+    {
+      "km": 58,
+      "state": "upcoming"
+    }
+  ],
+  "sessions": [
+    {
+      "day": "Sun",
+      "session": "Long run, HR under 150",
+      "km": "22 km"
+    },
+    {
+      "day": "Tue",
+      "session": "Easy + 6 × 20 s strides",
+      "km": "13 km"
+    }
+  ],
+  "motivation_label": "Monday mindset",
+  "motivation": "Ten weeks ago this was a stretch. Now it's just the plan. Enjoy it.",
+  "goal": "80 km a week: the 2026 goal",
+  "message": [
+    "This is the 80 km week, the goal you set for 2026.",
+    "Six runs, strides Tuesday and Thursday, and a 22 km long run on Sunday.",
+    "Ten weeks ago this was a stretch. Now it's the plan.",
+    "Run it easy and enjoy it: recovery week follows."
+  ]
+}
