@@ -4,10 +4,9 @@
   "kicker": "Monday · 21 – 27 Dec",
   "hero_value": "80",
   "hero_unit": "km this week",
-  "caption": "The 2026 goal, up from 26 km a week in October.",
+  "caption": "The 2026 goal, up from 26 km a week.",
   "week_chart": [
     {
-      "label": "26 Oct",
       "km": 52,
       "state": "done"
     },
@@ -40,7 +39,6 @@
       "state": "done"
     },
     {
-      "label": "This week",
       "km": 80,
       "state": "current"
     },
@@ -49,16 +47,42 @@
       "state": "upcoming"
     }
   ],
-  "sessions": [
+  "plan": [
     {
-      "day": "Sun",
-      "session": "Long run, HR under 150",
-      "km": "22 km"
+      "day": "Mon",
+      "session": "Run home, easy",
+      "km": "10"
     },
     {
       "day": "Tue",
       "session": "Easy + 6 × 20 s strides",
-      "km": "13 km"
+      "km": "13"
+    },
+    {
+      "day": "Wed",
+      "session": "Run in and home, easy",
+      "km": "12"
+    },
+    {
+      "day": "Thu",
+      "session": "Easy + 6 × 20 s strides",
+      "km": "12"
+    },
+    {
+      "day": "Fri",
+      "session": "Run in, easy",
+      "km": "11"
+    },
+    {
+      "day": "Sat",
+      "session": "Rest",
+      "km": ""
+    },
+    {
+      "day": "Sun",
+      "session": "Long run, HR under 150",
+      "km": "22",
+      "key": true
     }
   ],
   "goal": "80 km a week: the 2026 goal",

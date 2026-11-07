@@ -5,58 +5,46 @@
   "hero_value": "50",
   "hero_unit": "km, all easy",
   "caption": "Down from 69 km. Every run easy.",
-  "compare": [
+  "stat1_value": "69 km",
+  "stat1_label": "Last week (build)",
+  "stat2_value": "72 km",
+  "stat2_label": "Next week (build)",
+  "plan": [
     {
-      "label": "Last week",
-      "value": 69,
-      "display": "69 km"
+      "day": "Mon",
+      "session": "Run home, easy",
+      "km": "8"
     },
     {
-      "label": "This week",
-      "value": 50,
-      "display": "50 km",
-      "highlight": true
+      "day": "Tue",
+      "session": "Run in and home, easy",
+      "km": "10"
     },
     {
-      "label": "Next week",
-      "value": 72,
-      "display": "72 km"
-    }
-  ],
-  "days": [
-    {
-      "label": "M",
-      "km": "8",
-      "state": "planned",
-      "today": true
+      "day": "Wed",
+      "session": "Run home, very easy",
+      "km": "8"
     },
     {
-      "label": "T",
-      "km": "10",
-      "state": "planned"
+      "day": "Thu",
+      "session": "Rest",
+      "km": ""
     },
     {
-      "label": "W",
-      "km": "8",
-      "state": "planned"
+      "day": "Fri",
+      "session": "Run in, easy",
+      "km": "9"
     },
     {
-      "label": "T",
-      "state": "rest"
-    },
-    {
-      "label": "F",
-      "km": "9",
-      "state": "planned"
-    },
-    {
-      "label": "S",
+      "day": "Sat",
+      "session": "Long run, HR under 145",
       "km": "15",
-      "state": "key"
+      "key": true
     },
     {
-      "label": "S",
-      "state": "rest"
+      "day": "Sun",
+      "session": "Rest",
+      "km": ""
     }
   ],
   "goal": "Block 3 next: up to 80 km a week",

@@ -25,12 +25,23 @@
 <tr><td style="padding-top:2px;font-size:40px;line-height:42px;font-weight:700;color:#f0efec;">{{HERO_VALUE}}<span style="font-size:16px;line-height:20px;font-weight:400;color:#c3c2b7;">&nbsp;{{HERO_UNIT}}</span></td></tr>
 <tr><td style="padding-top:2px;font-size:14px;line-height:19px;color:#c3c2b7;">{{CAPTION}}</td></tr>
 
-<!-- Last week, this week, next week (this week highlighted) -->
-<tr><td style="padding-top:12px;">{{COMPARE}}</td></tr>
+<!-- Last week and next week, either side of this one -->
+<tr><td style="padding-top:10px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td width="50%" valign="top" style="border-left:2px solid #383835;padding-left:10px;">
+<div style="font-size:18px;line-height:22px;font-weight:700;color:#f0efec;">{{STAT1_VALUE}}</div>
+<div style="font-size:11px;line-height:14px;color:#898781;">{{STAT1_LABEL}}</div>
+</td>
+<td width="50%" valign="top" style="border-left:2px solid #383835;padding-left:10px;">
+<div style="font-size:18px;line-height:22px;font-weight:700;color:#f0efec;">{{STAT2_VALUE}}</div>
+<div style="font-size:11px;line-height:14px;color:#898781;">{{STAT2_LABEL}}</div>
+</td>
+</tr></table>
+</td></tr>
 
-<!-- Week plan: Mon-Sun, planned km per day; the key session in bright blue -->
-<tr><td style="padding-top:12px;">{{DAYS}}</td></tr>
 
+<!-- The week's runs, day by day, with a total -->
+<tr><td style="padding-top:10px;">{{PLAN}}</td></tr>
 
 <!-- Link back to the goals -->
 <tr><td style="padding-top:8px;font-size:12px;line-height:16px;color:#c3c2b7;"><span style="color:#3987e5;">&#8594;</span>&nbsp;{{GOAL}}</td></tr>

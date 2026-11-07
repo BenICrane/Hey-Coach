@@ -5,52 +5,42 @@
   "hero_value": "63",
   "hero_unit": "km this week",
   "caption": "Build week 2: five runs and a 19 km long run.",
-  "days": [
+  "plan": [
     {
-      "label": "M",
-      "km": "10",
-      "state": "planned",
-      "today": true
+      "day": "Mon",
+      "session": "Strength, then run home easy",
+      "km": "10"
     },
     {
-      "label": "T",
-      "km": "14",
-      "state": "planned"
-    },
-    {
-      "label": "W",
-      "km": "10",
-      "state": "planned"
-    },
-    {
-      "label": "T",
-      "state": "rest"
-    },
-    {
-      "label": "F",
-      "km": "10",
-      "state": "planned"
-    },
-    {
-      "label": "S",
-      "km": "19",
-      "state": "key"
-    },
-    {
-      "label": "S",
-      "state": "rest"
-    }
-  ],
-  "sessions": [
-    {
-      "day": "Sat",
-      "session": "Long run, HR under 150",
-      "km": "19 km"
+      "day": "Tue",
+      "session": "Run in and home, easy",
+      "km": "14"
     },
     {
       "day": "Wed",
       "session": "Easy + 6 × 20 s strides",
-      "km": "10 km"
+      "km": "10"
+    },
+    {
+      "day": "Thu",
+      "session": "Rest",
+      "km": ""
+    },
+    {
+      "day": "Fri",
+      "session": "Run in, easy",
+      "km": "10"
+    },
+    {
+      "day": "Sat",
+      "session": "Long run, HR under 150",
+      "km": "19",
+      "key": true
+    },
+    {
+      "day": "Sun",
+      "session": "Rest",
+      "km": ""
     }
   ],
   "goal": "Building to 80 km a week by December",

@@ -44,11 +44,11 @@ LIMITS = {
     "stat1_value": 9, "stat2_value": 9, "stat1_label": 22, "stat2_label": 22,
     "strip_start": 14, "strip_end": 14,
 }
-# The Monday templates carry a week plan as well, so their captions get two
-# lines at most and they show two key sessions, not three.
+# The Monday templates carry the week's day-by-day plan, so their captions
+# get two lines at most and each plan row stays on one line.
 MONDAY_LIMITS = {"caption": 64}
-MONDAY_SESSIONS = 2
 SESSION_TEXT = 24  # one line in the sessions table
+PLAN_TEXT = 30     # one line in the Monday plan table
 MAX_WORDS, MIN_LINES, MAX_LINES = 60, 3, 5
 
 
@@ -223,11 +223,11 @@ def week_chart(weeks):
 
     Weekly km across the plan as columns. Only this week is highlighted
     (blue, with its km on top); done weeks are grey, upcoming weeks are the
-    track colour. Labels are optional: give them to the first, current and
-    last weeks only so they don't collide.
+    track colour. Labels are optional (leave them out on Monday to save
+    space); if given, label only the first and current weeks.
     """
     top = max(w["km"] for w in weeks)
-    h_max = 40
+    h_max = 26
     fills = {"done": OTHER, "current": DONE, "upcoming": TRACK}
     cols, labels = [], []
     for w in weeks:
@@ -251,7 +251,44 @@ def week_chart(weeks):
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
         f'style="border-collapse:separate;table-layout:fixed;"><tr>{"".join(cols)}</tr>'
         f'<tr><td colspan="{len(weeks)}" height="1" bgcolor="{MUTED}" style="height:1px;background-color:{MUTED};font-size:1px;line-height:1px;">&nbsp;</td></tr>'
-        f'<tr>{"".join(labels)}</tr></table>'
+        + (f'<tr>{"".join(labels)}</tr>' if any(w.get("label") for w in weeks) else "")
+        + "</table>"
+    )
+
+
+def plan(rows):
+    """[{"day": "Mon", "session": "Easy, run home", "km": "10", "key": true}]
+
+    The week's runs, one row per day (all 7 days). Rest days: "km" "" or
+    omitted, shown muted. The key session (usually the long run) gets a
+    blue marker and bold text. A total row is added from the km values.
+    """
+    out, total = [], 0.0
+    for i, r in enumerate(rows):
+        key = r.get("key", False)
+        k = str(r.get("km", "") or "")
+        rest = not k
+        try:
+            total += float(k)
+        except ValueError:
+            pass
+        line = f"border-top:1px solid {TRACK};" if i else ""
+        ink = MUTED if rest else (TEXT if key else TEXT_2)
+        mark = f'<span style="color:{DONE};">&#9679;</span>&nbsp;' if key else ""
+        cell = f"{line}padding:3px 0;font-size:12px;line-height:14px;"
+        out.append(
+            f'<tr><td width="34" style="{cell}font-weight:700;color:{MUTED if rest else TEXT};">{esc(r["day"])}</td>'
+            f'<td style="{cell}padding-left:6px;padding-right:6px;font-weight:{700 if key else 400};color:{ink};">{mark}{esc(r["session"])}</td>'
+            f'<td align="right" style="{cell}white-space:nowrap;font-weight:700;color:{MUTED if rest else TEXT};">'
+            f'{esc(k) + "&nbsp;km" if k else "&mdash;"}</td></tr>'
+        )
+    out.append(
+        f'<tr><td colspan="2" style="border-top:1px solid {MUTED};padding:4px 0 0;font-size:12px;line-height:15px;font-weight:700;color:{TEXT};">Total</td>'
+        f'<td align="right" style="border-top:1px solid {MUTED};padding:4px 0 0;font-size:12px;line-height:15px;font-weight:700;color:{TEXT};white-space:nowrap;">{km(total)}&nbsp;km</td></tr>'
+    )
+    return (
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">'
+        + "".join(out) + "</table>"
     )
 
 
@@ -283,7 +320,7 @@ def status(d):
 COMPONENTS = {
     "progress": progress, "days": days, "compare": compare,
     "meter": meter, "sessions": sessions, "status": status,
-    "week_chart": week_chart,
+    "week_chart": week_chart, "plan": plan,
 }
 
 
@@ -297,9 +334,13 @@ def check_copy(data):
     for key, limit in limits.items():
         if key in data and len(str(data[key])) > limit:
             problems.append(f"'{key}' is {len(str(data[key]))} chars (max {limit}): {data[key]!r}")
+    week = data.get("plan", [])
+    if monday and len(week) != 7:
+        problems.append(f"'plan' has {len(week)} rows (want 7, Mon-Sun)")
+    for r in week:
+        if len(r["session"]) > PLAN_TEXT:
+            problems.append(f"plan session {r['session']!r} is {len(r['session'])} chars (max {PLAN_TEXT})")
     rows = data.get("sessions", [])
-    if monday and len(rows) > MONDAY_SESSIONS:
-        problems.append(f"'sessions' has {len(rows)} rows (Monday templates show {MONDAY_SESSIONS})")
     for r in rows:
         if len(r["session"]) > SESSION_TEXT:
             problems.append(f"session {r['session']!r} is {len(r['session'])} chars (max {SESSION_TEXT})")

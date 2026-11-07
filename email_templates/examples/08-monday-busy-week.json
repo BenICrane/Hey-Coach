@@ -9,52 +9,42 @@
     "state": "good",
     "label": "Weekend free: Sat–Sun optional"
   },
-  "days": [
-    {
-      "label": "M",
-      "km": "10",
-      "state": "planned",
-      "today": true
-    },
-    {
-      "label": "T",
-      "km": "14",
-      "state": "planned"
-    },
-    {
-      "label": "W",
-      "km": "10",
-      "state": "planned"
-    },
-    {
-      "label": "T",
-      "km": "14",
-      "state": "key"
-    },
-    {
-      "label": "F",
-      "km": "10",
-      "state": "planned"
-    },
-    {
-      "label": "S",
-      "state": "rest"
-    },
-    {
-      "label": "S",
-      "state": "rest"
-    }
-  ],
-  "sessions": [
-    {
-      "day": "Thu",
-      "session": "Long run to work, easy",
-      "km": "14 km"
-    },
+  "plan": [
     {
       "day": "Mon",
       "session": "Strength, then run home",
-      "km": "10 km"
+      "km": "10"
+    },
+    {
+      "day": "Tue",
+      "session": "Run in and home, longer",
+      "km": "14"
+    },
+    {
+      "day": "Wed",
+      "session": "Commutes + 6 × 20 s strides",
+      "km": "10"
+    },
+    {
+      "day": "Thu",
+      "session": "Long run to work, HR ≤150",
+      "km": "14",
+      "key": true
+    },
+    {
+      "day": "Fri",
+      "session": "Run in, longer + strides",
+      "km": "10"
+    },
+    {
+      "day": "Sat",
+      "session": "Away. Rest",
+      "km": ""
+    },
+    {
+      "day": "Sun",
+      "session": "Away. Optional 5–8 km easy",
+      "km": ""
     }
   ],
   "goal": "Block 2, build week 1 of 3",

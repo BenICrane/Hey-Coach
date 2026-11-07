@@ -9,40 +9,42 @@
   "stat1_label": "Last week, of 58",
   "stat2_value": "4 runs",
   "stat2_label": "Still in the bank",
-  "days": [
+  "plan": [
     {
-      "label": "M",
-      "km": "10",
-      "state": "planned",
-      "today": true
+      "day": "Mon",
+      "session": "Strength, then run home easy",
+      "km": "10"
     },
     {
-      "label": "T",
-      "km": "14",
-      "state": "planned"
+      "day": "Tue",
+      "session": "Run in and home, easy",
+      "km": "14"
     },
     {
-      "label": "W",
-      "km": "10",
-      "state": "planned"
+      "day": "Wed",
+      "session": "Easy + 6 × 20 s strides",
+      "km": "10"
     },
     {
-      "label": "T",
-      "state": "rest"
+      "day": "Thu",
+      "session": "Rest",
+      "km": ""
     },
     {
-      "label": "F",
-      "km": "10",
-      "state": "planned"
+      "day": "Fri",
+      "session": "Run in, easy",
+      "km": "10"
     },
     {
-      "label": "S",
+      "day": "Sat",
+      "session": "Long run, HR under 150",
       "km": "19",
-      "state": "key"
+      "key": true
     },
     {
-      "label": "S",
-      "state": "rest"
+      "day": "Sun",
+      "session": "Rest",
+      "km": ""
     }
   ],
   "goal": "Still on track for 80 km a week",
