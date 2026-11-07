@@ -52,20 +52,20 @@ New job week. Through Saturday: 20.8 km from 4 runs, 76% of running time in zone
 | Sun 8 Nov | Very easy 10 km, HR <145. Don't make up the missed long run the day after a hard 5 km | 10 |
 | **Total** | | **~31** |
 
-## Next week: 9 – 15 Nov (Block 2, build week 1, 57 km)
+## Next week: 9 – 15 Nov (Block 2, build week 1, 58 km)
 
-Away Saturday and Sunday, so the full 57 km is done by Friday and the weekend is optional. LMS isn't running at the moment. Most runs are commutes (about 5 km each way, made longer when needed). The long run is Thursday morning, on a much longer route to work.
+Away Saturday and Sunday, so the full 58 km is done by Friday and the weekend is optional. LMS isn't running at the moment. Most runs are commutes (about 5 km each way, made longer when needed). The long run is Thursday morning, on a much longer route to work.
 
 | Day | Session | km |
 |---|---|---|
-| Mon 9 Nov | Morning: 25–30 min strength session. Evening: run home, longer route (~6:00/km, HR ≤150) | 9 |
-| Tue 10 Nov | Run in, longer route, easy (6). Run home, longer route, easy (7) | 13 |
+| Mon 9 Nov | Run in, longer route, easy (~6:00/km, HR ≤150). Evening: 25–30 min strength session | 10 |
+| Tue 10 Nov | Run in, longer route, easy (7). Run home, longer route, easy (7) | 14 |
 | Wed 11 Nov | Run in, easy + 6 × 20 s strides (5). Run home, easy (5) | 10 |
 | Thu 12 Nov | Long run to work, much longer route: start at 6:05–6:10/km and keep HR ≤150 (~1 h 25 min). Travel home without running | 14 |
-| Fri 13 Nov | Run in, much longer route, easy + 6 × 20 s strides | 11 |
+| Fri 13 Nov | Run in, much longer route, easy + 6 × 20 s strides | 10 |
 | Sat 14 Nov | Away. Rest | — |
-| Sun 15 Nov | Away. Optional 5–8 km very easy if it fits. Not needed to hit 57 km | (0–8) |
-| **Total** | | **57** |
+| Sun 15 Nov | Away. Optional 5–8 km very easy if it fits. Not needed to hit 58 km | (0–8) |
+| **Total** | | **58** |
 
 ## Progress
 
