@@ -50,22 +50,22 @@ Done: 51.8 km from 7 runs, 87% of running time in zones 1–2. Away at the weeke
 | Fri 13 Nov | Run in 10 km with strides | Run home 5.7 km, 6:10/km, HR 140 |
 | Sat–Sun | Away | Rest |
 
-## This week: 16 – 22 Nov (Block 2, build week 2, 59 km proposed)
+## This week: 16 – 22 Nov (Block 2, build week 2, 57 km)
 
-The block target is 63 km, but that would be +22% on last week's 51.8 km (and +21% on the last full build week, 52.2 km), over the 15% maximum in Principles.md. Proposed: 59 km this week (+14%) and 65 km for 23 – 29 Nov (+10%) instead of 69. Block 3 targets (72/76/80) are then within the limits and the 80 km goal still lands in Christmas week. Block targets in the table stay unchanged until agreed.
+The block target is 63 km, but that would be +22% on last week's 51.8 km (and +21% on the last full build week, 52.2 km), over the 15% maximum in Principles.md. Proposed: 57–59 km this week (+10–14%) and 65 km for 23 – 29 Nov (+10%) instead of 69. Block 3 targets (72/76/80) are then within the limits and the 80 km goal still lands in Christmas week. Block targets in the table stay unchanged until agreed.
 
 No travel in the calendar, so the long run moves back to Sunday. Keep the long run slower than last week: both recent long runs drifted above HR 150.
 
 | Day | Session | km |
 |---|---|---|
-| Mon 16 Nov | Morning: 25–30 min strength session (log it on Garmin). Evening: run home, longer route, easy (~6:00/km, HR ≤150) | 10 |
+| Mon 16 Nov | Morning: 25–30 min strength session (log it on Garmin). Evening: run home, direct route, easy (~6:00/km, HR ≤150). Only 5 km possible today | 5 |
 | Tue 17 Nov | Run in, longer route, easy (6). Run home, longer route, easy (6) | 12 |
-| Wed 18 Nov | Run in, easy + 6 × 20 s strides (5). Run home, easy (5) | 10 |
-| Thu 19 Nov | Run in, very easy, HR <145 | 5 |
+| Wed 18 Nov | Run in, much longer route, easy: start at 6:05–6:10/km, HR ≤150 (13). Run home, easy + 6 × 20 s strides (5) | 18 |
+| Thu 19 Nov | Rest after the 18 km day | — |
 | Fri 20 Nov | Run in, easy + 6 × 20 s strides | 5 |
 | Sat 21 Nov | Rest | — |
 | Sun 22 Nov | Long run: start at 6:10–6:15/km and keep HR ≤150 the whole way; walk 30 s or slow down if it creeps up (~1 h 45 min) | 17 |
-| **Total** | | **59** |
+| **Total** | | **57** |
 
 ## Progress
 
@@ -76,7 +76,7 @@ Updated by the coach agent after each Garmin sync. Actuals come from `v_runs` in
 | 26 Oct – 1 Nov | 52 | 52.2 | 5 | 16.9 | 82% | On target. Long run HR 154 drifted above 150 |
 | 2 – 8 Nov | 44 | 29.0 | 5 | 8.3 | 81% | 34% under (new job week; 44 was a ceiling). Hard 5 km on Sat replaced the long run |
 | 9 – 15 Nov | 57 | 51.8 | 7 | 13.5 | 87% | 9% under (Fri run shortened, away at weekend). Long run HR 151 at 5:59/km |
-| 16 – 22 Nov | 63 | | | | | Proposed 59 (15% cap) |
+| 16 – 22 Nov | 63 | | | | | Planned 57 (15% cap) |
 | 23 – 29 Nov | 69 | | | | | Proposed 65 |
 | 30 Nov – 6 Dec | 50 | | | | | |
 | 7 – 13 Dec | 72 | | | | | |
