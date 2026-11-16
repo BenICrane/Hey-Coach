@@ -54,16 +54,16 @@ Done: 51.8 km from 7 runs, 87% of running time in zones 1–2. Away at the weeke
 
 The block target was 63 km, but that would have been +22% on last week's 51.8 km, over the 15% maximum in Principles.md. Agreed on 16 Nov: 59 km this week (+14%) and 65 km for 23 – 29 Nov (+10%). Block 3 targets (72/76/80) stay within the limits and the 80 km goal still lands in Christmas week.
 
-No travel in the calendar, so the long run moves back to Sunday. Keep the long run slower than last week: both recent long runs drifted above HR 150.
+No travel in the calendar, so the long run moves back to Sunday. Restructured on 16 Nov: Monday's run was missed, Wednesday evening is a work social and Thursday may be drinks, so Saturday becomes a run day. Keep the long run slower than last week: both recent long runs drifted above HR 150.
 
 | Day | Session | km |
 |---|---|---|
-| Mon 16 Nov | Morning: 25–30 min strength session (log it on Garmin). Evening: run home, direct route, easy (~6:00/km, HR ≤150). Only 5 km possible today | 5 |
-| Tue 17 Nov | Run home, direct route, easy | 5 |
-| Wed 18 Nov | Run in, much longer route, easy: start at 6:05–6:10/km, HR ≤150 (13). Run home, easy + 6 × 20 s strides (5) | 18 |
-| Thu 19 Nov | Run in, very easy, HR <145 (5). Run home, easy (5). Back-to-back after Wednesday, so keep both gentle | 10 |
-| Fri 20 Nov | Run in, easy + 6 × 20 s strides | 5 |
-| Sat 21 Nov | Rest | — |
+| Mon 16 Nov | Couldn't run home. Rest (strength session if it was done in the morning) | — |
+| Tue 17 Nov | Run home, longer route, easy + 6 × 20 s strides | 8 |
+| Wed 18 Nov | Run in, much longer route, easy: start at 6:05–6:10/km, HR ≤150. No run home (work social) | 13 |
+| Thu 19 Nov | Short run in, very easy, HR <145. Possible drinks in the evening | 5 |
+| Fri 20 Nov | Run home (evening, so there's time to recover if Thursday was late), longer route, easy. Drop to 5 km if feeling rough | 8 |
+| Sat 21 Nov | Easy + 6 × 20 s strides | 9 |
 | Sun 22 Nov | Long run: start at 6:10–6:15/km and keep HR ≤150 the whole way; walk 30 s or slow down if it creeps up (~1 h 40 min) | 16 |
 | **Total** | | **59** |
 
