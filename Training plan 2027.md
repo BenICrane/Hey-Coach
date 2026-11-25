@@ -76,7 +76,7 @@ Updated by the coach agent after each Garmin sync. Actuals come from `v_runs` in
 | 26 Oct – 1 Nov | 52 | 52.2 | 5 | 16.9 | 82% | On target. Long run HR 154 drifted above 150 |
 | 2 – 8 Nov | 44 | 29.0 | 5 | 8.3 | 81% | 34% under (new job week; 44 was a ceiling). Hard 5 km on Sat replaced the long run |
 | 9 – 15 Nov | 57 | 51.8 | 7 | 13.5 | 87% | 9% under (Fri run shortened, away at weekend). Long run HR 151 at 5:59/km |
-| 16 – 22 Nov | 59 | | | | | |
+| 16 – 22 Nov | 59 | 8.9 | 2 | 4.5 | 75% | 85% under. Only two runs logged (Tue, Wed); no runs Thu–Sun, so the planned Sunday long run didn't happen. Below the 80% zone 1–2 guide |
 | 23 – 29 Nov | 65 | | | | | |
 | 30 Nov – 6 Dec | 50 | | | | | |
 | 7 – 13 Dec | 72 | | | | | |
